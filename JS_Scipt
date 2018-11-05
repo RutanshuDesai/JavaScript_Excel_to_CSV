@@ -1,0 +1,202 @@
+function exportData() {
+  var sheetsToExport = [
+    {
+      name: 'KatieWhitson_ABM_Events',
+      spreadSheetId: '1GUOH_Nk9KYuGfmPN4TXHtXcZ1EEB6OAh1bWx5AWbfuE',
+      sheetId: 467761614
+    },
+    {
+      name: 'AliciaMassey_ABM_Events',
+      spreadSheetId: '1OJLA7vgrCd__AeX_Xy4k21hec66NbhmEjyPZ3DLCUkI',
+      sheetId: 0
+    },
+    {
+      name: 'KarenHansell_ABM_Events',
+      spreadSheetId: '1r3T2s_XzCmPqT5p9Ct8xANMGn-HZnJ_vuHgDs000Sfo',
+      sheetId: 176412000
+    },
+    {
+      name: 'MendeilBailey_ABM_Events',
+      spreadSheetId: '1FTi10NxfelhnLx4A1kQ_v2hD1RLaMzMOxUg4c0hgHZ0',
+      sheetId: 1731027752
+    },
+    {
+      name: 'WendyBrookstein_ABM_Events',
+      spreadSheetId: '103pr738BvQIJIe5lhfx-d1p_07_t7Ui_UV2MVb5XDLU',
+      sheetId: 0
+    },
+    {
+      name: 'NoriInslerRosen_ABM_Events',
+      spreadSheetId: '1bshibrwoG5PSTwAzf0881vMrY25_WE7jID-4pxTzF_U',
+      sheetId: 0
+    },
+    {
+      name: 'AdamHagen_ABM_Events',
+      spreadSheetId: '14OmnklXhyIXGr08OtBn-n60-qbLNKWeuKrae0yoHC8M',
+      sheetId: 1130823435
+    },
+    {
+      name: 'LandenHescock_ABM_Events',
+      spreadSheetId: '1cRjknRc0uLsHxHZaJte-5sV7LhZi2GOvPnM5ILvDJLc',
+      sheetId: 0
+    },
+    {
+      name: 'Southeast_RFM_Events',
+      spreadSheetId: '12l6Ew7An76LrJS72DXu_b22xWelRPg-hpNus-5Z2PBo',
+      sheetId: 1792799373
+    },
+    {
+      name: 'Northeast_RFM_Events',
+      spreadSheetId: '1g8yQKlQbEOgLdK_qMwKbgElqx3bjuR7r4TrIooBqwws',
+      sheetId: 1636464929
+    },
+    {
+      name: 'West_RFM_Events',
+      spreadSheetId: '1E47xwZPI8ZdmkfEXg4YhkJGPXaFu0BwOaZuobn78rK8',
+      sheetId: 0
+    },
+    {
+      name: 'Central_RFM_Events',
+      spreadSheetId: '1EWaVybQxUSdP7lSNQgygjJbUDDXPUZxiPKaoYtm-oVU',
+      sheetId: 1323451993
+    },
+    {
+      name: 'Canada_RFM_Events',
+      spreadSheetId: '1z74HnOF_nKx5A53tPjzzf85Irg7bCqnYMPaRUeKnqck',
+      sheetId: 103284255
+    },
+    {
+      name: 'MidMarket_CA_Events',
+      spreadSheetId: '1ircw9TuGx-7EgcNvL1YW5Pd7nQsElHAh7jruCvnEzRc',
+      sheetId: 141447522
+    },
+    {
+      name: 'MobilePortfolioCenter_NAFM_Events',
+      spreadSheetId: '1SnEA59OIK_4wRlxys8_K5deDcC8G3Qxpk-R27ZGZ34I',
+      sheetId: 1106449413
+    },
+    {
+      name: 'FutureOfCNAD_RDC_Events',
+      spreadSheetId: '1OFwCwKo7gAI1I8J13vlnIwqsbyaF-NSKoEkwzS7PiIM',
+      sheetId: 33418013
+    },
+    {
+      name: 'AppModWorkshop_RDC_Events',
+      spreadSheetId: '1QoDfo0z60Gb60VRrB_wfH4fGddmwktPvjYiFP_iSft4',
+      sheetId: 997463502
+    },
+    {
+      name: 'AgileIntegrationThoughtLeadership_RDC_Events',
+      spreadSheetId: '1QoDfo0z60Gb60VRrB_wfH4fGddmwktPvjYiFP_iSft4',
+      sheetId: 33418013
+    },
+    {
+      name: 'AgileIntegrationWorkshop_RDC_Events',
+      spreadSheetId: '1QoDfo0z60Gb60VRrB_wfH4fGddmwktPvjYiFP_iSft4',
+      sheetId: 970430935
+    },
+    {
+      name: 'CCNGetReady_RDC_Events',
+      spreadSheetId: '1-GlSKklA_BNoXBUpOaL2Wg4k3hV9SilPMhr0cVCPDX8',
+      sheetId: 353643213
+    },
+    {
+      name: 'CCNGoFaster_RDC_Events',
+      spreadSheetId: '1-GlSKklA_BNoXBUpOaL2Wg4k3hV9SilPMhr0cVCPDX8',
+      sheetId: 1110630402
+    },
+    {
+      name: 'AnsibleAutomationWorkshop_RDC_Events',
+      spreadSheetId: '1_TSdockXf_ucTurwQjpg5eReTVnKVpEVI7mSHwBSz1s',
+      sheetId: 1397200079
+    },
+    {
+      name: 'PSInPerson_PS_Events',
+      spreadSheetId: '1yrFNGc4hjW5W779nQ35X1UkAK-XsGFIcbxJbuLs1kz8',
+      sheetId: 0
+    },
+    {
+      name: 'PSIndustry_PS_Events',
+      spreadSheetId: '1yrFNGc4hjW5W779nQ35X1UkAK-XsGFIcbxJbuLs1kz8',
+      sheetId: 621747415
+    },
+    {
+      name: 'OpenFirstRoadTour_PS_Events',
+      spreadSheetId: '1yrFNGc4hjW5W779nQ35X1UkAK-XsGFIcbxJbuLs1kz8',
+      sheetId: 893819128
+    },
+    {
+      name: 'RHUserGroups_RDC_Events',
+      spreadSheetId: '1uTHmzXQ7lF0aGgiBSgvOq9_mMuLVLo7MtihD6cwbPLs',
+      sheetId: 1728102092
+    },
+    {
+      name: 'SecuritySymposium_RDC_Events',
+      spreadSheetId: '1GWuP3VP3klVy-zaqj2QnThJ3pEBFBolA0CtKBNVBtSw',
+      sheetId: 353643213
+    }
+    
+    
+    
+  ];
+  
+  sheetsToExport.forEach(downloadCSV);
+ sendCompleted();
+}
+
+function downloadCSV(sheetToExport) {
+  var folder = "1EKxb73WaSmYSnKBj2wKCc6OBczUNsi0s";
+  var fileName = sheetToExport.name + "_" + sheetToExport.sheetId + ".csv";
+  
+  var sheet = getSheetById(sheetToExport.spreadSheetId, sheetToExport.sheetId);
+  if (!sheet) {
+    Logger.log("Unable to locate sheet with id " + sheetId);
+    return;
+  }
+  
+  var csv = '';
+  sheet.getDataRange().getValues().forEach(function(e) {
+    csv += e.map(function(item) {
+      var value = item;
+      if (item instanceof Date) {
+         value = Utilities.formatDate(item, "GMT", "MM/dd/YYYY");
+      }
+      
+      return (value + "").replace(/[\,\r\n]/g,' ')
+    }).join(",") + "\n";
+  });
+  
+  var folder = DriveApp.getFolderById(folder);
+  var existingFile = folder.getFilesByName(fileName);
+  if (existingFile.hasNext()) {
+     var file = existingFile.next();
+     if (file.getName() === fileName) {
+       Drive.Files.update({
+         title: file.getName(),
+         mimeType: MimeType.CSV
+       }, file.getId(), Utilities.newBlob('').setDataFromString(csv).setContentType("text/csv"));
+       return;
+    }
+  }
+  
+  folder.createFile(fileName, csv, MimeType.CSV)
+}
+
+function sendCompleted() {
+  MailApp.sendEmail('rudesai@redhat.com', "Done with Export", "We done did it."); 
+}
+
+function getSheetById(spreadSheetId, sheetId) {
+ var spreadSheet = SpreadsheetApp.openById(spreadSheetId);
+  
+  var sheets = spreadSheet.getSheets();
+  for (var i = 0; i < sheets.length; i++) {
+    var sheet = sheets[i];
+    Logger.log(sheet.getSheetId());
+    if (sheet.getSheetId() === sheetId) {
+      return sheet;
+    }
+  } 
+  
+  return undefined;
+}
